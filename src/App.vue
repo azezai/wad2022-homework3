@@ -5,6 +5,7 @@
     <router-link to="/Signup">Signup</router-link>
   </nav>
   <router-view/>
+  
 </template>
 
 <style>

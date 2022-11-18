@@ -6,7 +6,7 @@
         <!--Post 1-->
         <div class="user-post">
             <div class="user-post-header">
-                <img src="me.png" width="25" height="25" alt="Post">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXiGmEyNs2kbk30k1E3aH2ezJT-MUV5ouDy-ESy6WqFYMwdbk" width="25" height="25" alt="Post">
                 
                 <p id="date1"></p>
                 <div id="myData"></div>
@@ -26,7 +26,7 @@
         <!--Post 2-->
         <div class="user-post">
             <div class="user-post-header">
-                <img src="mem" width="25" height="25" alt="Post author picture">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXiGmEyNs2kbk30k1E3aH2ezJT-MUV5ouDy-ESy6WqFYMwdbk" width="25" height="25" alt="Post author picture">
                 <p>Oct 02, 2022</p>
             </div>
             <br>
@@ -40,7 +40,7 @@
         <!--Post 3-->
         <div class="user-post">
             <div class="user-post-header">
-                <img src="mem" width="25" height="25" alt="Post author picture">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXiGmEyNs2kbk30k1E3aH2ezJT-MUV5ouDy-ESy6WqFYMwdbk" width="25" height="25" alt="Post author picture">
                 <p>Oct 01, 2022</p>
             </div>
             <br>
@@ -54,7 +54,7 @@
         <!--Post 4-->
         <div class="user-post">
             <div class="user-post-header">
-                <img src="mem" width="25" height="25" alt="Post author picture">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXiGmEyNs2kbk30k1E3aH2ezJT-MUV5ouDy-ESy6WqFYMwdbk" width="25" height="25" alt="Post author picture">
                 <p>Sept 29, 2022</p>
             </div>
             <br>
@@ -72,7 +72,7 @@
         <!--Post 5-->
         <div class="user-post">
             <div class="user-post-header">
-                <img src="mem" width="25" height="25" alt="Post author picture">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXiGmEyNs2kbk30k1E3aH2ezJT-MUV5ouDy-ESy6WqFYMwdbk" width="25" height="25" alt="Post author picture">
                 <p>Jan 01, 2022</p>
             </div>
             <br>
@@ -101,12 +101,7 @@ export default {
   props: {
     msg: String
   },
-  data: function() {
-    return {
-  mem: require('../assets/me.png')
-    }
-    
-}
+  
 }
 
 
