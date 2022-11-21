@@ -84,11 +84,11 @@
             max: maxLength(15),
             containsPasswordRequirement: helpers.withMessage(
           () => `The password requires an uppercase`, 
-          (value) => /(?=.*[A-Z])=/.test(value)
+          (value) => /(?=.*[A-Z])/.test(value)
         ),
         containsPasswordRequirement2: helpers.withMessage(
           () => `The password requires 2 lowercase charactes`, 
-          (value) => /((?=.*[a-z]){2})/.test(value)
+          (value) => /((?=.*[a-z].*[a-z]))/.test(value)
         ),
         containsPasswordRequirement3: helpers.withMessage(
           () => `The password must contain a number`, 
@@ -98,7 +98,11 @@
           () => `The password must contain " " ` , 
           (value) => /(?=.*[" "])/.test(value)
         ),
-            //, lowercase, number and special character (?=.*[A-Z])(?=.*[!@#\$%\^&\*])
+        containsPasswordRequirement5: helpers.withMessage(
+          () => `The password has to begin with an uppercase`, 
+          (value) => /(?=,*([A-Z][a-z]*(?: [A-Z][a-z]*)*$))/.test(value)
+        ),
+            
             
         },
       },
