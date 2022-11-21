@@ -84,7 +84,7 @@
             max: maxLength(15),
             containsPasswordRequirement: helpers.withMessage(
           () => `The password requires an uppercase`, 
-          (value) => /(?=.*[A-Z])=/.test(value)
+          (value) => /(?=.*[A-Z])/.test(value)
         ),
         containsPasswordRequirement2: helpers.withMessage(
           () => `The password requires 2 lowercase charactes`, 
