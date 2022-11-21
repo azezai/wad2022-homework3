@@ -88,6 +88,81 @@
             </div>
             
         </div>
+        <!--Post 6-->
+        <div class="user-post">
+            <div class="user-post-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXiGmEyNs2kbk30k1E3aH2ezJT-MUV5ouDy-ESy6WqFYMwdbk" width="25" height="25" alt="Post author picture">
+                <p>Nov 19, 2022</p>
+            </div>
+            <br>
+            <div class="user-post-footer">
+                The sauna is nearly warm, get your behinds to physicum now. #sauna
+            </div>
+            <div class="like-button">
+                <button @click.stop="counter5 += 1" style="background-color:darkgrey;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">{{ counter5 }} likes</button>
+            </div>
+            
+        </div>
+        <!--Post 7-->
+        <div class="user-post">
+            <div class="user-post-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXiGmEyNs2kbk30k1E3aH2ezJT-MUV5ouDy-ESy6WqFYMwdbk" width="25" height="25" alt="Post author picture">
+                <p>Nov 20, 2022</p>
+            </div>
+            <br>
+            <div class="user-post-footer">
+                Party tonight in Delta, get ready
+            </div>
+            <div class="like-button">
+                <button @click.stop="counter6 += 1" style="background-color:darkgrey;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">{{ counter6 }} likes</button>
+            </div>
+            
+        </div>
+        <!--Post 8-->
+        <div class="user-post">
+            <div class="user-post-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXiGmEyNs2kbk30k1E3aH2ezJT-MUV5ouDy-ESy6WqFYMwdbk" width="25" height="25" alt="Post author picture">
+                <p>Nov 20, 2022</p>
+            </div>
+            <br>
+            <div class="user-post-footer">
+                Is anybody able to help me with my math homework. #send help
+            </div>
+            <div class="like-button">
+                <button @click.stop="counter7 += 1" style="background-color:darkgrey;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">{{ counter7 }} likes</button>
+            </div>
+            
+        </div>
+        <!--Post 9-->
+        <div class="user-post">
+            <div class="user-post-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXiGmEyNs2kbk30k1E3aH2ezJT-MUV5ouDy-ESy6WqFYMwdbk" width="25" height="25" alt="Post author picture">
+                <p>Nov 21, 2022</p>
+            </div>
+            <br>
+            <div class="user-post-footer">
+                Honestly i want this semester to already end.
+            </div>
+            <div class="like-button">
+                <button @click.stop="counter8 += 1" style="background-color:darkgrey;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">{{ counter8 }} likes</button>
+            </div>
+            
+        </div>
+        <!--Post 10-->
+        <div class="user-post">
+            <div class="user-post-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXiGmEyNs2kbk30k1E3aH2ezJT-MUV5ouDy-ESy6WqFYMwdbk" width="25" height="25" alt="Post author picture">
+                <p>Nov 20, 2022</p>
+            </div>
+            <br>
+            <div class="user-post-footer">
+                There is too much month at the end of money. Looking for some work if anyone can hep hmu
+            </div>
+            <div class="like-button">
+                <button @click.stop="counter9 += 1" style="background-color:darkgrey;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">{{ counter9 }} likes</button>
+            </div>
+            
+        </div>
         </div>
         
         <!-- Posts end -->
@@ -97,7 +172,7 @@
     <div class="right"></div>
     </section>
     <div class="reset-button">
-              <button @click.stop="counter = 0, counter1=0, counter2 = 0, counter3=0, counter4=0 " > Reset Likes</button>
+              <button @click.stop="counter = 0, counter1=0, counter2 = 0, counter3=0, counter4=0, counter5 = 0, counter6=0, counter7 = 0, counter8=0, counter9=0 " > Reset Likes</button>
             </div> 
     <br>
     <br>
@@ -127,6 +202,10 @@ export default {
       counter3:0,
       counter4:0,
       counter5:0,
+      counter6:0,
+      counter7:0,
+      counter8:0,
+      counter9:0,
       
     };
   },
