@@ -1,5 +1,8 @@
 <template>
-  
+  <section class="content-area">
+    <!--TODO: Sidemenu-left -->
+    <div class="left">
+    </div>
   <div class="centerdiv">
         <!-- Posts start -->
         <div class="posts">
@@ -7,8 +10,7 @@
         <div class="user-post">
             <div class="user-post-header">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXiGmEyNs2kbk30k1E3aH2ezJT-MUV5ouDy-ESy6WqFYMwdbk" width="25" height="25" alt="Post">
-                
-                <p id="date1"></p>
+                <p>Oct 02, 2022</p>
                 <div id="myData"></div>
             </div>
             <br>
@@ -20,7 +22,7 @@
                 Did you know that Tartu is the culture capital of the world in 2024? #Tartu2024 
             </div>
             <div class="like-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">
+                <button @click.stop="counter += 1" style="background-color:darkgrey;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">{{ counter }} likes</button>
             </div>
         </div>
         <!--Post 2-->
@@ -34,7 +36,7 @@
                 Life in tartu is so boring, no culture here am I right?
             </div>
             <div class="like-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">
+                <button @click.stop="counter1 += 1" style="background-color:darkgrey;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">{{ counter1 }} likes</button>
             </div>
         </div>
         <!--Post 3-->
@@ -48,7 +50,7 @@
             Hey qtpie, it looks like you haven't checked out my <a href="#">Onlyfans</a> page yet!
             </div>
             <div class="like-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">
+                <button @click.stop="counter2 += 1" style="background-color:darkgrey;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">{{ counter2 }} likes</button>
             </div>
         </div>
         <!--Post 4-->
@@ -66,9 +68,11 @@
                 Some dank memes for my followers
             </div>
             <div class="like-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">
+                <button @click.stop="counter3 += 1" style="background-color:darkgrey;border:none" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">{{ counter3 }} likes</button>
+            
             </div>
         </div>
+        
         <!--Post 5-->
         <div class="user-post">
             <div class="user-post-header">
@@ -80,29 +84,59 @@
                 If I had a dollar for every bug I solve in a minute I'd earn an extra minimum wage #pleb
             </div>
             <div class="like-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">
+                <button @click.stop="counter4 += 1" style="background-color:darkgrey;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png" width="25" height="25" alt="Like button">{{ counter4 }} likes</button>
             </div>
+            
         </div>
-        </div> 
+        </div>
+        
         <!-- Posts end -->
     </div>
+    <br>
     
+    <div class="right"></div>
+    </section>
+    <div class="reset-button">
+              <button @click.stop="counter = 0, counter1=0, counter2 = 0, counter3=0, counter4=0 " > Reset Likes</button>
+            </div> 
+    <br>
+    <br>
+    <br> 
   <TheFooter />
 </template>
+
 
 <script>
 
 import TheFooter from './TheFooter.vue'
 export default {
-  name: 'Mainpage',
+  name: 'TheMainpage',
   components:{
     TheFooter
   },
   props: {
     msg: String
   },
+  name2: "App",
+
+  data() {
+    return {
+      counter: 0,
+      counter1:0,
+      counter2:0,
+      counter3:0,
+      counter4:0,
+      counter5:0,
+      
+    };
+  },
+  
+  
+  
+  
   
 }
+
 
 
 </script>
@@ -172,9 +206,45 @@ a {
 }
 .like-button{
   width: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: darkgray;
+  border-radius: 10px;
+  padding: 5px 2px;
 }
 img + p:hover {
   color: red;
 }
 
+.left {
+  margin-top: 5px;
+  grid-area: leftside;
+  background-color: darkgray;
+  border-radius: 10px;
+}
+.centerdiv {
+  grid-area: center;
+  border-radius: 10px;
+}
+.reset-button {
+  
+    margin: 0 auto;
+    display: block;
+  }
+
+  
+
+.right {
+  margin-top: 5px;
+  grid-area: rightside;
+  background-color: darkgray;
+  border-radius: 10px;
+}
+.content-area {
+  display: grid;
+  grid-template-areas: 'leftside center center center rightside';
+  grid-template-columns: 20% 1fr 1fr 1fr 20%;
+  gap: 10px;
+
+  width: calc(100% - 10px);
+}
 </style>

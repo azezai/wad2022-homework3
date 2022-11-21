@@ -1,13 +1,12 @@
 <template>
     
     <div class="form-container">
-    <strong>Welcome to PostIt!</strong><br>
+    
     <div class="col">
-        <a href="#" style="color:blue" class="btn">Create an account</a><br>
-        or<br>
+        
         Please log in
       </div>
-    <form action="index.html" method="get" id="login">
+    <form action="#" method="get" id="login">
         
         <input type="email" id="Email" name="Email" placeholder="Email" required>
         <br>
@@ -29,14 +28,13 @@
   
   import TheFooter from './TheFooter.vue'
   export default {
-    name: 'Signup',
+    name: 'TheSignup',
     components:{
       TheFooter
     },
     props: {
       msg: String
-    },
-    Post: 'me.png'
+    }
   
   }
   </script>

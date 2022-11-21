@@ -2,10 +2,9 @@
   <nav>
     <header>Welcome to our sad attempt at a page</header>
     <router-link to="/">Home</router-link> |
-    <router-link to="/Signup">Signup</router-link>
+    <router-link to="/TheSignup">Signup</router-link>
   </nav>
   <router-view/>
-  
 </template>
 
 <style>
