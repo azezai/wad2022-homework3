@@ -5,6 +5,7 @@
   <div class="centerdiv">
     <!-- Posts start -->
     <div class="posts">
+      <!--TODO: see osa siin tuleks teha paganama selleks, komponendiks-->
       <div :key="post.id" v-for="post in posts" class="user-post" >
       <div class="user-post-header">
         <img 
