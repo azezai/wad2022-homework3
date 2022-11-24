@@ -93,12 +93,12 @@
           (value) => /(?=.*[0-9])/.test(value)
         ),
         containsPasswordRequirement4: helpers.withMessage(
-          () => `The password must contain " " ` , 
-          (value) => /(?=.*[" "])/.test(value)
+          () => `The password must contain "_" ` , 
+          (value) => /(?=.*["_"])/.test(value)
         ),
         containsPasswordRequirement5: helpers.withMessage(
           () => `The password has to begin with an uppercase`, 
-          (value) => /(?=,*([A-Z][a-z]*(?: [A-Z][a-z]*)*$))/.test(value)
+          (value) => /(?=.*[A-Z])/.test(value[0])
         ),
             
             
