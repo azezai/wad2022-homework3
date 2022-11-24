@@ -1,11 +1,28 @@
 <template>
-  <nav>
-    <header>Welcome to our sad attempt at a page</header>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/TheSignup">Signup</router-link>
-  </nav>
-  <router-view/>
+  <TheHeader />
+  <router-view />
+  <TheFooter />
 </template>
+
+<script>
+import TheHeader from './components/TheHeader.vue'
+import TheFooter from './components/TheFooter.vue'
+export default {
+  name: 'App',
+  components: {
+    TheHeader,
+    TheFooter
+  },
+  data() {
+    return {
+      
+    }
+  },
+  methods: {
+
+  }
+}
+</script>
 
 <style>
 #app {
@@ -14,26 +31,6 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-nav {
-  
-  width: calc(100vw - 10px);
-  margin: 5px 5px 0 5px;
-  background-color: darkgray;
-  overflow: auto;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: x-large;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: blue;
 }
 
 </style>

@@ -39,7 +39,6 @@
         <a href="#" style="color:blue" class="btn">Forgot password?</a>
         </div>
     </div>
-    <TheFooter />
   </template>
   
   <script>
@@ -47,11 +46,10 @@
   import { required, email, minLength, maxLength, helpers } from '@vuelidate/validators'
   
   
-  import TheFooter from './TheFooter.vue'
   export default {
-    name: 'TheSignup',
+    name: 'SignUpView',
     components:{
-      TheFooter
+      
     },
     props: {
       msg: String
