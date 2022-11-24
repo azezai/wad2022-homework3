@@ -90,9 +90,12 @@ const store = new Vuex.Store({
 	},
 	mutations: {
 		like (state, postId)  {
-			const post = state.posts.find((p) => p.id === postId);
+			const post = state.posts.find((post) => post.id === postId);
 			post.likes++;
 		},
+		reset (state) {
+			state.posts.forEach((post) => post.likes = 0)
+		}
 	},
 });
 

@@ -32,26 +32,30 @@
           </button>
         </div>
       </div>
+      <div class="user-post">
+        <!-- Like reset button -->
+  <div class="reset-button">
+  <button @click="reset()"> Reset Likes</button>
+  </div> 
+  <br>
+  <br>
+  <br>
+      </div>
     </div>
         
   <!-- Posts end -->
-  </div>
+  
+</div>
   <br>
+  
     
   <div class="right"></div>
 </section>
-<div class="reset-button">
-  <button @click.stop="counter = 0, counter1=0, counter2 = 0, counter3=0, counter4=0, counter5 = 0, counter6=0, counter7 = 0, counter8=0, counter9=0 " > Reset Likes</button>
-</div> 
-<br>
-<br>
-<br> 
+ 
 </template>
 
 
 <script>
-
-
 export default {
   name: 'HomeView',
   components:{
@@ -62,6 +66,9 @@ export default {
   methods: {
     like(post) {
       this.$store.commit('like', post.id)
+    },
+    reset() {
+      this.$store.commit('reset')
     }
   },
   computed: {
@@ -166,6 +173,7 @@ img + p:hover {
 .centerdiv {
   grid-area: center;
   border-radius: 10px;
+  margin-bottom: 25px;
 }
 .reset-button {
   
