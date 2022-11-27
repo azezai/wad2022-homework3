@@ -26,7 +26,7 @@ const store = new Vuex.Store({
 				id: 3,
 				date: "Oct 02, 2022",
 				profile: "",
-				body: 'Hey qtpie, it looks like you haven\'t checked out my <a href="#">Onlyfans</a> page yet!',
+				body: 'Hey qtpie, it looks like you haven\'t checked out my Onlyfans page yet!',
 				img: "",
 				likes: 0,
 			},
